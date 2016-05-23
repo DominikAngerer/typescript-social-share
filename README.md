@@ -33,3 +33,22 @@ If you add the `--production` flag all your js, css, html files get minified/ugl
 ```
 gulp build --production
 ```
+
+
+## How to use
+
+You can use the `data-social-share` attribute wherever you want, but as it triggers an action I would recommend to use a button.
+There is also an example how to style them in the `/app/styles/components/_social_share.scss` file. The HTML can than look something like:
+
+```
+<button data-social-share="https://github.com/DominikAngerer/typescript-social-share" data-social-share-type="facebook">Share on facebook</button>
+```
+
+### Social Share Types
+- Facebook - `data-social-share-type="facebook"`
+- Pinterest - `data-social-share-type="pinterest"`
+- Twitter - `data-social-share-type="twitter"`
+- Google+ - `data-social-share-type="google-plus"`
+- LinkedIn - `data-social-share-type="linkedin"`
+- Xing - `data-social-share-type="xing"`
+- VK - `data-social-share-type="vk"`
