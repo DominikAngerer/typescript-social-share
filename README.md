@@ -4,7 +4,7 @@
 
 ## [Running Example](http://ts-social-share.dominikangerer.com/)
 
-[![TS-social-share Example (PNG)](http://ts-social-share.dominikangerer.com/github-images/example.png?v=1)](http://ts-social-share.dominikangerer.com/)
+[![TS-social-share Example (PNG)](http://ts-social-share.dominikangerer.com/github-images/example.png?v=2)](http://ts-social-share.dominikangerer.com/)
 
 ## Getting Started
 
