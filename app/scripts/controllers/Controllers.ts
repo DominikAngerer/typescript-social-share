@@ -1,0 +1,1 @@
+export { SocialShareController } from '../controllers/SocialShareController';
