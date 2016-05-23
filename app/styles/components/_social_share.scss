@@ -1,0 +1,51 @@
+.social_share {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.social_share__item {
+    button {
+        @extend %resetbutton;
+        cursor:pointer;
+        width:100%;
+        line-height:90px;
+        min-height:90px;
+        
+        &[data-social-share-type="facebook"] {
+            background:#3b5998;
+            color:#fff;
+        }
+        
+        &[data-social-share-type="twitter"] {
+            background:#4099ff;
+            color:#fff;
+        }
+        
+        &[data-social-share-type="pinterest"] {
+            background:#cb2027;
+            color:#fff;
+        }
+        
+        &[data-social-share-type="google-plus"] {
+            background:#dd4b39;
+            color:#fff;
+        }
+        
+        &[data-social-share-type="linkedin"] {
+            background:#007bb5;
+            color:#fff;
+        }
+        
+        &[data-social-share-type="xing"] {
+            background:#126567;
+            color:#fff;
+        }
+        
+        &[data-social-share-type="vk"] {
+            background:#45668e;
+            color:#fff;
+        }
+        
+    } 
+}

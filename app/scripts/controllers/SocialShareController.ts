@@ -84,6 +84,9 @@ export class SocialShareController extends Controller {
             case 'xing':
                 url = 'https://www.xing.com/app/user?op=share;url=' + encodeURIComponent(this.toShare);
                 break;
+            case 'vk':
+                url = 'https://vk.com/share.php?url=' + encodeURIComponent(this.toShare);
+                break;
             default:
         }
         if(this.shareType) {
