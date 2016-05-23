@@ -1,4 +1,4 @@
-# Typescript Social Share
+# Typescript Social Share [![Build Status](https://travis-ci.org/DominikAngerer/typescript-social-share.svg?branch=master)](https://travis-ci.org/DominikAngerer/typescript-social-share)
 
 ## [Documentation](http://ts-social-share.dominikangerer.com/docs/)
 
