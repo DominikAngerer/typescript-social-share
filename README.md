@@ -1,5 +1,5 @@
 # Typescript Social Share [![Build Status](https://travis-ci.org/DominikAngerer/typescript-social-share.svg?branch=master)](https://travis-ci.org/DominikAngerer/typescript-social-share)
-[![TS-Social Share Header (PNG)](http://ts-social-share.dominikangerer.com/github-images/header.png?v=1)](http://ts-social-share.dominikangerer.com/)
+[![TS-Social Share Header (PNG)](http://ts-social-share.dominikangerer.com/github-images/header.png?v=2)](http://ts-social-share.dominikangerer.com/)
 
 ## [Documentation](http://ts-social-share.dominikangerer.com/docs/)
 
