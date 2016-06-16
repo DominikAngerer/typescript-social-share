@@ -42,6 +42,15 @@ export class SocialShareController extends Controller {
      * @type {string}
      */    
     private shareType: string;
+    
+    /**
+     * Content of the data-social-share-media data Attribute
+     * at the moment only used for pintrest, cause they need an URL + image.
+     * 
+     * @private
+     * @type {string}
+     */
+    private toShareMedia: string;
 
     /**
      * Creates an instance of SocialShareController.
@@ -64,13 +73,16 @@ export class SocialShareController extends Controller {
         event.preventDefault();
         this.toShare = this.$().getAttribute('data-social-share');
         this.shareType = this.$().getAttribute('data-social-share-type');
+       
         let url: string = window.location.href;
         switch (this.shareType) {
             case 'facebook':
                 url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.toShare);   
                 break;
             case 'pinterest':
-                url = 'https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(this.toShare);   
+                this.toShareMedia = this.$().getAttribute('data-social-share-media');
+                url = 'https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(this.toShare);
+                url = this.addQueryParameterToUrlString(url, 'media', this.toShareMedia);
                 break;
             case 'twitter':
                 url = 'https://twitter.com/home?status=Have%20a%20look%20at%3A%20' + encodeURIComponent(this.toShare);
@@ -92,6 +104,31 @@ export class SocialShareController extends Controller {
         if(this.shareType) {
             window.open(url, '_blank', 'location=no,height=300,width=500,scrollbars=yes,status=yes');
         }    
+    }
+    
+    /**
+     * This appends an Parameter to an URL string or updates them.
+     * 
+     * @param {string} url URL string you want to modify
+     * @param {string} param QueryParam Name
+     * @param {string} value QueryParam Value
+     * @returns {string} modified URL
+     */
+    addQueryParameterToUrlString(url: string, param: string, value: string): string {
+        let link: HTMLAnchorElement = document.createElement('a')
+        let regex = /(?:\?|&amp;|&)+([^=]+)(?:=([^&]*))*/g;
+        let match: any;
+        let str: any = [];
+        link.href = url;
+        param = encodeURIComponent(param);
+        while (match = regex.exec(link.search)) {
+            if (param != match[1]) {
+                str.push(match[1] + (match[2] ? '=' + match[2] : ''));
+            }
+        }
+        str.push(param + (value ? '=' + encodeURIComponent(value) : ''));
+        link.search = str.join('&');
+        return link.href;
     }
     
 }

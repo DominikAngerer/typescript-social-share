@@ -44,6 +44,14 @@ There is also an example how to style them in the `/app/styles/components/_socia
 <button data-social-share="https://github.com/DominikAngerer/typescript-social-share" data-social-share-type="facebook">Share on facebook</button>
 ```
 
+### Pinterest
+
+For Pinterest you also need a media Parameter (image or something) which should be displayed on pinterest. Simply add `data-social-share-media` to your button.
+
+```
+<button data-social-share="https://github.com/DominikAngerer/typescript-social-share" data-social-share-media="http://ts-social-share.dominikangerer.com/github-images/header.png" data-social-share-type="pinterest">Share on pinterest</button>
+```
+
 ### Social Share Types
 - Facebook - `data-social-share-type="facebook"`
 - Pinterest - `data-social-share-type="pinterest"`
