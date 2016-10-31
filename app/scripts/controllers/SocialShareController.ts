@@ -74,7 +74,12 @@ export class SocialShareController extends Controller {
         this.toShare = this.$().getAttribute('data-social-share');
         this.shareType = this.$().getAttribute('data-social-share-type');
        
+        if(!this.toShare) {
+            this.toShare = window.location.href;
+        }
+
         let url: string = window.location.href;
+
         switch (this.shareType) {
             case 'facebook':
                 url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.toShare);   
