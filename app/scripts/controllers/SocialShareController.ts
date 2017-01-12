@@ -65,7 +65,7 @@ export class SocialShareController extends Controller {
     /**
      * Creates the window for the share dialog according to the
      * Data-social-share-type and the URL which was passed using the
-     * data-social-share attribute.
+     * data-social-share attribute. 
      * 
      * @param {Event} event Current click Event
      */
