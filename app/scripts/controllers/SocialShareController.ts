@@ -6,7 +6,7 @@ import { Controller } from '../lib/Controller';
  * Can be configured directly in the DOM like:
  *
  * ```
- * <a href="http://example.org" data-social-share="http://example.org" data-social-share-type="facebook">Share on facebook</a>
+ * <button data-social-share="http://example.org" data-social-share-type="facebook">Share on facebook</button>
  * ```
  *
  * This would share the URL example.org to facebook, or at least
